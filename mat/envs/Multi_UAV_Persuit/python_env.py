@@ -139,6 +139,7 @@ class python_env(object):
             rew = 0
 
             dis_infor = []
+            #123
 
             # gain_hp = delta_hp[5:]
             # print('delta_hp',delta_hp)
@@ -151,7 +152,7 @@ class python_env(object):
             obstacle_relative_pos = np.sqrt(np.sum(np.square(np.array(agent.pos - agent.nearest_obstacle_pos))))
 
             k = 1e-3
-            k_1 = 0.02
+            k_1 = 0.04
 
             penatration_distance = np.logaddexp(0, (agent.sefe_distance_warning - obstacle_relative_pos) / k) * k
             if dis_tar > 3:
@@ -165,8 +166,8 @@ class python_env(object):
             #         winflag+=1
             # print("survive_state", [good_agent.survive for good_agent in good_agents])
 
-            if self.done and agent.survive == 2:
-                rew += 50
+            if self.done :
+                rew +=10
                 print("rew_done!", rew)
                 print("survive_state", [good_agent.survive for good_agent in good_agents])
             # self.calculate_catcher_distance(agent)

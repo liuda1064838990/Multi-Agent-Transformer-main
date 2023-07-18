@@ -1,4 +1,4 @@
-2023/7/10 23:44:37
+2023/7/13 17:02:33
  
 Error
 CollisionMeshData couldn't be created because the mesh has been marked as non-accessible. Mesh asset path "" Mesh name "BuildingMesh-00000"
@@ -1991,4 +1991,7 @@ CollisionMeshData couldn't be created because the mesh has been marked as non-ac
 
 Error
 CollisionMeshData couldn't be created because the mesh has been marked as non-accessible. Mesh asset path "" Mesh name "BuildingMesh-00189"
+
+Warning
+Default audio device was changed, but the audio system failed to initialize it. Attempting to reset sound system.
 

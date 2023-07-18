@@ -44,6 +44,7 @@ class unity_wrapper_env():
         #self.u3d_env=UnityEnvironment(file_name=r"../../../mat/envs/unity_environment/rushOut.exe", worker_id=7)
         #self.py_env=python_env(num_agents=num_agents, num_adversaries=num_adversaries)
         self.u3d_env =[UnityEnvironment(file_name=r"../../../mat/envs/parrel_unity_env/"+str(i)+"/rushOut.exe", worker_id=i) for i in range(number_parallel_env)]
+        #self.u3d_env = [UnityEnvironment( worker_id=i) for i in range(number_parallel_env)]
         self.py_env = [python_env(num_agents=num_agents, num_adversaries=num_adversaries) for i in range(number_parallel_env)]
         self.n_threading = number_parallel_env
 
@@ -171,7 +172,7 @@ class unity_wrapper_env():
 
 
             info=None
-            if done:
+            if done :
                 done_n=np.array([True for _ in range(self.number_good_agents)])
                 new_obs_n_,share_obs_,info=self.reset(env_id=env_id)
                 # for i in range(self.number_good_agents):

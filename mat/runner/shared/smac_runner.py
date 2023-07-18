@@ -19,6 +19,7 @@ class SMACRunner(Runner):
 
     def run(self):
         #self.warmup()
+        #self.restore(r"E:\CODE\satellite_persuit_game\Multi-Agent-Transformer-main\mat\scripts\results\StarCraft2\3m\mat\check\run102\models\transformer_2400.pt")
 
         start = time.time()
         episodes = int(self.num_env_steps) // self.episode_length // self.n_rollout_threads
